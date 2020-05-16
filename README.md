@@ -18,10 +18,11 @@ Next, we apply LIME on the neighbouring images using three archutectures:
 3. Segment the input image into superpixels, apply this segementation on K nearest neighbours and randomly turn superpixels on/off on the neighbors. Predict the resulting CheXNet predictions using the binary segment featurization using some simple surrogate model, e.g. logistic regression. Code in `lime_architecture3.ipynb`.
 
 ## Model to be explained
-[CheXNet](https://stanfordmlgroup.github.io/projects/chexnet/) takes a chest X-Ray and outputs a probability for each of 14 deceases. The model has been shown to achieve an AUC of 0.7-0.9 on different diagnoses. It has been trained on the ChestX-ray14 dataset. 
+[CheXNet](https://stanfordmlgroup.github.io/projects/chexnet/) takes a chest X-Ray and outputs a probability for each of 14 deceases. The model has been shown to achieve an AUC of 0.7-0.9 on different diagnoses. It has been trained on the ChestX-ray14 dataset. To build the model, download `model.pth.tar` from [here](https://github.com/arnoweng/CheXNet) and use *load_model* function from `load_model.py`. 
 
 ## Data
 Two sources are used: 
 
-1. [MIMIC CXR from PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/) contains 377,110 images corresponding to 227,835 radiographic studies. 14 labels were extracted using two free-text methods. **Advantage**: has medical records attached to each image which enables applying NLP techniques i.e. BERT. 
-2. [ChestX-ray14 from NIH](https://nihcc.app.box.com/v/ChestXray-NIHCC) has 112,120 frontal-view chest X-ray images of 30,805 unique patients. 14 labels extracted using two free-text methods. **Advantage**: has a pretrained CheXNet model freely available. We also use ChestX-ray14 images to train the VAE 
+1. [MIMIC CXR from PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/) contains 377,110 images corresponding to 227,835 radiographic studies. 14 labels were extracted using two free-text methods. **Advantage**: has medical records attached to each image which enables applying NLP techniques i.e. BERT. **How to use**: download the [data](https://physionet.org/content/mimic-cxr/2.0.0/) and place lables in `.files/labels` and first 10k images in `.files/p10` or create more folders if you want to use data from folders p11 onwards.
+
+2. [ChestX-ray14 from NIH](https://nihcc.app.box.com/v/ChestXray-NIHCC) has 112,120 frontal-view chest X-ray images of 30,805 unique patients. 14 labels extracted using two free-text methods. **Advantage**: has a pretrained CheXNet model freely available. We use ChestX-ray14 images to train the VAE. **How to use**: download the [data](https://nihcc.app.box.com/v/ChestXray-NIHCC) and place it in ./files/chex-ray-14. 
