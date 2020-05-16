@@ -4,7 +4,7 @@ This project aims at explaining the decisions of the CheXNet model developed by 
 define clinically meaningful neighbours for LIME in the medical imaging context. We also suggest three ways of applying LIME on the neighbours found.
 
 <p align="center">
-  <img files/results/lime.png>
+  <img ./files/results/lime.png>
 </p>
 
 ![](files/results/lime.png)
