@@ -2,6 +2,7 @@
 
 This project aims at explaining the decisions of the 141-layer CheXNet model developed by [Rajpurkar (2017)](https://stanfordmlgroup.github.io/projects/chexnet/). We modify the definition of neighbours in LIME for interpreting a deep neural network on chest X-Rays. 
 
+This project was completed as part of Machine Learning for Healthcare class at MIT (6.871/HST.956). Full results are available in `final_report.pdf`. Colaborators: Jiong Wei Lua, Alexandru Socolov and Andras Szep. 
 
 ## Approach
 We improve upon [classical LIME](https://github.com/marcotcr/lime) by defining clinically meaningful neighbors. We explore two definitions of neighbors:
