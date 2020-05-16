@@ -1,4 +1,4 @@
-# Modifying LIME for medical imaging
+# Modifying LIME for Neural Networks on Medical Imaging
 
 This project aims at explaining the decisions of the 141-layer CheXNet model developed by [Rajpurkar (2017)](https://stanfordmlgroup.github.io/projects/chexnet/). We modify the definition of neighbours in LIME for interpreting a deep neural network on chest X-Rays. 
 
