@@ -1,16 +1,16 @@
-# LIME-for-medical-imaging
-Modifying LIME for interpreting a deep neural network for diagnosing 14 conditions on chest X-Rays
+# Modifying LIME for medical imaging
 
-This project aims at explaining the decisions of the 141-layer CheXNet model developed by [Rajpurkar (2017)](https://stanfordmlgroup.github.io/projects/chexnet/).
+This project aims at explaining the decisions of the 141-layer CheXNet model developed by [Rajpurkar (2017)](https://stanfordmlgroup.github.io/projects/chexnet/). We modify the definition of neighbours in LIME for interpreting a deep neural network on chest X-Rays. 
+
 
 ## Approach
-We improve upon (classical LIME)[https://github.com/marcotcr/lime] by defining clinically meaningful neighbors. We explore two definitions of neighbors:
+We improve upon [classical LIME](https://github.com/marcotcr/lime) by defining clinically meaningful neighbors. We explore two definitions of neighbors:
 
 1. Similarity in Variational Auto Encoder latent space (done on ChestX-ray14 dataset). 
 2. Similarity in medical reports attached to each patient using BERT emeddings. 
 
-## CheXNet Model to be explained
-Takes a chest X-Ray and outputs a probability for each of 14 deceases. The model has been shown to achieve an AUC of 0.7-0.9 on different diagnoses. It has been trained on the ChestX-ray14 dataset. 
+## Model to be explained
+[CheXNet](https://stanfordmlgroup.github.io/projects/chexnet/) takes a chest X-Ray and outputs a probability for each of 14 deceases. The model has been shown to achieve an AUC of 0.7-0.9 on different diagnoses. It has been trained on the ChestX-ray14 dataset. 
 
 ## Data
 Two sources are used: 
