@@ -3,10 +3,6 @@
 This project aims at explaining the decisions of the CheXNet model developed by [Rajpurkar (2017)](https://stanfordmlgroup.github.io/projects/chexnet/) of predicting 14 deceases using chest X-Rays. We propose two ways to 
 define clinically meaningful neighbours for LIME in the medical imaging context. We also suggest three ways of applying LIME on the neighbours found.
 
-<p align="center">
-  <img ./files/results/lime.png>
-</p>
-
 ![](files/results/lime.png)
 
 This project was completed as part of Machine Learning for Healthcare class at MIT ([6.871/HST.956](https://mlhcmit.github.io)). Full results are available in `final_report.pdf`. Colaborators: Jiong Wei Lua, Alexandru Socolov and Andras Szep. 
